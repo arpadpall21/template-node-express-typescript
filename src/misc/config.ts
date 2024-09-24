@@ -18,8 +18,7 @@ let config: Config;
 
 try {
   const customConfig: Config = JSON.parse(fs.readFileSync('./config/config.json', 'utf-8'));
-  const mergedConfigs = objectMerge(defaultConfig, customConfig);
-  config = mergedConfigs as Config;
+  config = objectMerge(defaultConfig, customConfig) as Config;
 } catch (err) {
   console.error('Failed to parse config/config.json');
   throw err;

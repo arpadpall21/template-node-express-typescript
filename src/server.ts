@@ -1,7 +1,7 @@
 import express, { Request, Response, NextFunction } from 'express';
 import config from './misc/config';
 
-console.info('Server initialized with config', config);
+console.info('Server initialized with config:', config);
 
 const app = express();
 const host = config.server.host;
@@ -36,5 +36,5 @@ app.use('/', (req: Request, res: Response) => {
 });
 
 app.listen(port, () => {
-  console.warn(`Express is listening on ${host}:${port}`);
+  console.warn(`Express is listening on: ${host}:${port}`);
 });
