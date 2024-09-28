@@ -1,5 +1,5 @@
 import express, { Request, Response, NextFunction } from 'express';
-import config from './misc/config';
+import config from './config';
 
 console.info('Server initialized with config:', config);
 
